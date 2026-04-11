@@ -31,9 +31,16 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const next = () => setCurrent((i) => (i + 1) % testimonials.length);
+  const next = useCallback(() => setCurrent((i) => (i + 1) % testimonials.length), []);
   const prev = () => setCurrent((i) => (i - 1 + testimonials.length) % testimonials.length);
+
+  useEffect(() => {
+    if (paused) return;
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [paused, next]);
 
   const t = testimonials[current];
 
