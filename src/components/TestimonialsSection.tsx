@@ -64,7 +64,11 @@ const TestimonialsSection = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="glass rounded-2xl p-8 md:p-12 min-h-[280px] flex flex-col items-center justify-center text-center">
+          <div
+            className="glass rounded-2xl p-8 md:p-12 min-h-[280px] flex flex-col items-center justify-center text-center"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
             <Quote className="w-10 h-10 text-primary/30 mb-6" />
 
             <AnimatePresence mode="wait">
