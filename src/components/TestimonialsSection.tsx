@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -31,9 +31,16 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const next = () => setCurrent((i) => (i + 1) % testimonials.length);
+  const next = useCallback(() => setCurrent((i) => (i + 1) % testimonials.length), []);
   const prev = () => setCurrent((i) => (i - 1 + testimonials.length) % testimonials.length);
+
+  useEffect(() => {
+    if (paused) return;
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [paused, next]);
 
   const t = testimonials[current];
 
@@ -57,7 +64,11 @@ const TestimonialsSection = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="glass rounded-2xl p-8 md:p-12 min-h-[280px] flex flex-col items-center justify-center text-center">
+          <div
+            className="glass rounded-2xl p-8 md:p-12 min-h-[280px] flex flex-col items-center justify-center text-center"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
             <Quote className="w-10 h-10 text-primary/30 mb-6" />
 
             <AnimatePresence mode="wait">
