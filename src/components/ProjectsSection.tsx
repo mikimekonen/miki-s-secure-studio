@@ -8,6 +8,7 @@ const projects = [
     desc: "A full-featured Learning Management System enabling students and teachers to interact, manage courses, and track progress efficiently.",
     tech: ["React", "PHP", "MySQL"],
     color: "from-primary/40 to-cyan-400/40",
+    image: "/e-learning.jpg",
     github: "https://github.com/lakibir/student-management"
   },
   {

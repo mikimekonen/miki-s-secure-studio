@@ -9,9 +9,11 @@ import WhyMeSection from "@/components/WhyMeSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
+    <Preloader />
     <Navbar />
     <HeroSection />
     <AboutSection />
