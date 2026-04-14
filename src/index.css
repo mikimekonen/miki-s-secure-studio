@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 222 47% 7%;
+    --background: 230 50% 4%;
     --foreground: 210 40% 92%;
 
-    --card: 222 41% 10%;
+    --card: 230 40% 6%;
     --card-foreground: 210 40% 92%;
 
-    --popover: 222 41% 10%;
+    --popover: 230 40% 6%;
     --popover-foreground: 210 40% 92%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 222 47% 7%;
 
-    --secondary: 222 30% 16%;
+    --secondary: 230 30% 12%;
     --secondary-foreground: 210 40% 92%;
 
-    --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 230 30% 12%;
+    --muted-foreground: 215 20% 65%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 222 47% 7%;
@@ -30,28 +30,28 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
+    --border: 230 30% 15%;
+    --input: 230 30% 15%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     --glow: 217 91% 60%;
-    --glow-muted: 217 91% 40%;
-    --surface: 222 41% 12%;
-    --surface-hover: 222 41% 16%;
+    --glow-muted: 217 91% 30%;
+    --surface: 230 41% 8%;
+    --surface-hover: 230 41% 12%;
 
     --gradient-start: 217 91% 60%;
     --gradient-end: 199 89% 48%;
     --gradient-accent: 262 83% 58%;
 
-    --sidebar-background: 222 47% 7%;
+    --sidebar-background: 230 50% 4%;
     --sidebar-foreground: 210 40% 92%;
     --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 222 47% 7%;
-    --sidebar-accent: 222 30% 16%;
+    --sidebar-primary-foreground: 230 50% 4%;
+    --sidebar-accent: 230 30% 12%;
     --sidebar-accent-foreground: 210 40% 92%;
-    --sidebar-border: 222 30% 18%;
+    --sidebar-border: 230 30% 15%;
     --sidebar-ring: 217 91% 60%;
   }
 }
@@ -59,6 +59,7 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important; /* Hide original cursor globally for custom cursor */
   }
 
   body {
@@ -92,7 +93,8 @@
   }
 
   .glass {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+    @apply bg-card/40 backdrop-blur-2xl border border-white/5;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   }
 
   .section-padding {

@@ -4,28 +4,22 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Abebe Tadesse",
-    role: "CEO, TechEthiopia",
-    text: "Miki delivered an outstanding Learning Management System that exceeded our expectations. His attention to detail and security-first approach made the project a huge success.",
+    name: "Kasahun Asbo Yalew (MSc)",
+    role: "Lecturer, Computer Science Department, Kombolcha Institute of Technology",
+    text: "I am pleased to recommend Micheal Mekonen, a dedicated Computer Science graduate with strong academic background and practical experience in software development. He has demonstrated excellent skills in problem-solving, web development, and quickly adapting to new technologies.",
     rating: 5,
   },
   {
-    name: "Sara Mohammed",
-    role: "Project Manager, EduSoft",
-    text: "Working with Miki was a fantastic experience. He built our school management platform with clean code, intuitive UI, and delivered ahead of schedule.",
+    name: "Mohammed Oumer",
+    role: "Lecturer, Wollo University (Kombolcha Institute of Technology)",
+    text: "I am writing to strongly recommend Micheal Mekonen Birke, a graduate student whom I have had the privilege of teaching and mentoring. I have closely worked with him during courses in Advanced Programming (Java) and Mobile Application Development, as well as supervising his course-based projects.",
     rating: 5,
   },
   {
-    name: "Daniel Bekele",
-    role: "Founder, DataHealth AI",
-    text: "Miki's work on our Breast Cancer Detection ML project was impressive. He combined strong technical skills with a deep understanding of the problem domain.",
+    name: "Hussien Mekonnen Yimer (MSc)",
+    role: "Department of Computer Science, Kombolcha Institute of Technology, Wollo University",
+    text: "Across these subjects, Micheal Mekonen consistently demonstrated exceptional intellectual ability, a strong work ethic, and a genuine passion for understanding complex computing concepts. His performance was not only reflected in his outstanding grades but also in the quality of his projects. He showed active engagement during lectures and lab sessions.",
     rating: 5,
-  },
-  {
-    name: "Hana Girma",
-    role: "Freelance Designer",
-    text: "I've collaborated with Miki on multiple web projects. His React expertise and eye for modern design always result in pixel-perfect, performant applications.",
-    rating: 4,
   },
 ];
 
